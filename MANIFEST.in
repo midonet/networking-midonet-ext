@@ -1,0 +1,13 @@
+include README.rst
+include LICENSE
+include requirements.txt
+include test-requirements.txt
+
+exclude .gitignore
+exclude .gitreview
+exclude tox.ini
+exclude babel.cfg
+
+recursive-exclude tools *
+
+global-exclude *.pyc
