@@ -5,6 +5,7 @@ include test-requirements.txt
 
 exclude .gitignore
 exclude .gitreview
+exclude .testr.conf
 exclude tox.ini
 exclude babel.cfg
 
