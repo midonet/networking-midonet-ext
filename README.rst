@@ -10,6 +10,8 @@ For the newton release, the following features are included in
 networking-midonet-ext:
 
 - qos
+- lbaasv2
+- fip64
 
 
 Supported MidoNet versions
