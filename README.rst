@@ -60,6 +60,17 @@ Monolithic plugin can be configured in `/etc/neutron/neutron.conf` as::
     core_plugin = midonet_v2_ext
 
 
+L3 Service plugin
+~~~~~~~~~~~~~~~~~
+
+networking-midonet-ext includes a custom L3 service plugin.
+L3 service plugin can be configured in `/etc/neutron/neutron.conf` as::
+
+
+    [DEFAULT]
+    service_plugins = midonet_l3_ext
+
+
 QoS
 ---
 
@@ -105,6 +116,20 @@ file ``/etc/neutron/neutron.conf``::
 
     [service_providers]
     service_provider=LOADBALANCERV2:Midonet:midonet_ext.neutron.services.loadbalancer.v2_driver.MidonetLoadBalancerDriver:default
+
+
+FIP 64
+------
+
+networking-midonet-ext provides 'fip64' API extension.
+To enable this extension, the path to the extension directory of
+networking-midonet-ext must be specified in ``/etc/neutron/neutron.conf``.
+For example, if networking-midonet-ext is installed in the directory
+``/usr/lib/python2.7/dist-packages/midonet-ext``, add the following::
+
+
+    [DEFAULT]
+    api_extensions_path = /usr/lib/python2.7/dist-packages/midonet-ext/neutron/extensions
 
 
 MidoNet API Client
