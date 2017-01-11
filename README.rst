@@ -111,10 +111,10 @@ LBaaS v2
 networking-midonet-ext provides LBaaS v2 service driver.
 
 To configure it, add the following entries in the Neutron configuration
-file ``/etc/neutron/neutron.conf``::
+file ``/etc/neutron/neutron.conf`` [1]_::
 
     [DEFAULT]
-    service_plugins = lbaasv2
+    service_plugins = neutron_lbaas.services.loadbalancer.plugin.LoadBalancerPluginv2
 
     [service_providers]
     service_provider=LOADBALANCERV2:Midonet:midonet_ext.neutron.services.loadbalancer.v2_driver.MidonetLoadBalancerDriver:default
@@ -144,3 +144,6 @@ file ``/etc/neutron/plugins/midonet/midonet.ini``::
 
     [MIDONET]
     client = midonet_ext.neutron.client.api.MidonetApiClient
+
+
+.. [1] https://bugs.launchpad.net/neutron/+bug/1630693
