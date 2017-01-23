@@ -15,7 +15,7 @@
 
 from oslo_log import log as logging
 
-from midonet.neutron.client import base
+from midonet_ext.neutron.client import base
 from midonet_ext.neutron.common import utils
 
 from midonetclient import client
@@ -238,6 +238,10 @@ class MidonetApiClient(base.MidonetClientBase):
         policy_dict = policy.to_dict()
         id_ = policy_dict['id']
         self.api_cli.delete_qos_policy(id_)
+
+    # MidoNet Pool Member
+    def get_pool_member(self, context, member_id):
+        return self.api_cli.get_pool_member(member_id)
 
 
 def _build_func(method, lb_op):
