@@ -23,9 +23,9 @@ from midonet.neutron._i18n import _
 from midonet.neutron.client import base as c_base
 from midonet.neutron.common import config  # noqa
 from midonet.neutron.common import constants as const
-from midonet.neutron.common import utils as c_utils
 from midonet.neutron.ml2 import sg_callback
 from midonet.neutron.ml2 import util as m_util
+from midonet_ext.neutron.common import utils as c_utils
 
 from neutron.extensions import portbindings
 from neutron.plugins.ml2 import driver_api as api
