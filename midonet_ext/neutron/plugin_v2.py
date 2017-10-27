@@ -18,10 +18,10 @@ from neutron_lib import exceptions as n_exc
 
 from midonet.neutron._i18n import _, _LE, _LW
 from midonet.neutron.db import agent_membership_db as am_db
-from midonet.neutron.db import port_binding_db as pb_db
 from midonet.neutron.db import provider_network_db as pnet_db
 from midonet.neutron import plugin
 from midonet_ext.neutron.common import utils as c_utils
+from midonet_ext.neutron.db import port_binding_db as pb_db
 from midonet_ext.neutron.midonet_v2 import managers
 from neutron.api.v2 import attributes
 from neutron.db import allowedaddresspairs_db as addr_pair_db
